@@ -1,13 +1,13 @@
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Main  {
-    public static void main(String[] args) {
+public class SecondMain {
+    public static void main(String[] args) throws IOException {
         int x = 7;
         String countryCode = "US";
         EarthquakeRetriever retriever = new EarthquakeRetriever();
         try {
-            ArrayList<Earthquake> earthquakes = retriever.getEarthquakes();
+            ArrayList<Earthquake> earthquakes = retriever.getEarthquakes2(countryCode, x);
             if (earthquakes.isEmpty()) {
                 System.out.println("No Earthquakes were recorded past " + x + " days");
             } else {
